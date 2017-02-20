@@ -1,0 +1,13 @@
+<p>some text to see if it loads up</p>
+
+
+<%= form_tag("/create", method: "get") do %>
+  <%= label_tag(:link, "input url for shortening:") %>
+  <%= text_field_tag(:link) %>
+  <%= submit_tag("shorten") %>
+<% end %>
+
+<% if @link  %>
+<%= @link.original %></br>
+your new url is <a href="http://localhost:3000/<%= @link.id%>">http://localhost:3000/<%= @link.id%></a>
+<% end %>
