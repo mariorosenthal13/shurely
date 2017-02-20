@@ -1,8 +1,8 @@
-<p>some text to see if it loads up</p>
+<h1>Shurly the Url Shortener</h1>
 
 
 <%= form_tag("/create", method: "get") do %>
-  <%= label_tag(:link, "input url for shortening:") %>
+  <%= label_tag(:link, "Input url for shortening (please type with http://...):") %>
   <%= text_field_tag(:link) %>
   <%= submit_tag("shorten") %>
 <% end %>

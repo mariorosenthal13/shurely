@@ -17,7 +17,7 @@ class LinksController < ApplicationController
   end
 
   def redirect
-    byebug
+     
     redirect_to Link.find(params[:link_id])[:original]
   end
 
